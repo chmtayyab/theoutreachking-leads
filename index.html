@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Guest Posting & Manual Outreach Services | The Outreach King">
+    <title>Premium Guest Posting Services | The Outreach King</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leads.theoutreachking.com/">
+    <meta property="og:title" content="Premium Guest Posting Services | The Outreach King">
+    <meta property="og:description" content="Premium Guest Posting & Manual Outreach Services">
+    <meta property="og:image" content="https://theoutreachking.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://leads.theoutreachking.com/">
+    <meta property="twitter:title" content="Premium Guest Posting Services | The Outreach King">
+    <meta property="twitter:description" content="Premium Guest Posting & Manual Outreach Services">
+    <meta property="twitter:image" content="https://theoutreachking.com/images/og-image.jpg">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E55A2B;
+            --secondary: #007BFF;
+            --accent: #F8F8F8;
+            --dark: #333333;
+            --medium-gray: #666666;
+            --light-gray: #F8F8F8;
+            --white: #FFFFFF;
+            --border: #EEEEEE;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-cta {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-cta:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .hero-text h1 span {
+            color: var(--primary);
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--medium-gray);
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .trust-indicators {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .trust-item i {
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .slots-remaining {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+            }
+        }
+        
+        /* Dual Audience Section */
+        .dual-audience {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .audience-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .audience-column {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 40px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .audience-column.business {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .audience-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .audience-header i {
+            font-size: 48px;
+            margin-right: 20px;
+        }
+        
+        .audience-header h3 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .audience-benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .audience-benefits li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .audience-benefits li i {
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        
+        .audience-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .btn-white {
+            background-color: var(--white);
+            color: var(--primary);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn-white:hover {
+            background-color: var(--light-gray);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline-light {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+        
+        .audience-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .service-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: -50px auto 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: var(--shadow);
+        }
+        
+        .service-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .service-description {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .service-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-features li i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+        
+        .service-cta {
+            text-align: center;
+        }
+        
+        /* Packages Section */
+        .packages {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .package-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .package-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .package-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .package-card.featured::before {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .package-name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .package-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .package-price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--medium-gray);
+        }
+        
+        .package-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+        
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .package-features li i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50px;
+            right: -15px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .step-description {
+            color: var(--medium-gray);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-gray);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--medium-gray);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: var(--medium-gray);
+        }
+        
+        .rating {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            font-size: 20px;
+            color: var(--primary);
+            margin-right: 15px;
+            width: 25px;
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .social-links a.facebook:hover {
+            background-color: var(--secondary);
+        }
+        
+        .social-links a.twitter:hover {
+            background-color: #1DA1F2;
+        }
+        
+        .social-links a.linkedin:hover {
+            background-color: #0077B5;
+        }
+        
+        .social-links a.instagram:hover {
+            background-color: #C13584;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            transform: translateY(150%);
+            transition: transform 0.5s ease;
+        }
+        
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+        
+        .cookie-content {
+            flex: 1;
+        }
+        
+        .cookie-content p {
+            margin-bottom: 0;
+            color: var(--medium-gray);
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+        }
+        
+        .cookie-btn {
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .cookie-accept {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .cookie-decline {
+            background-color: var(--border);
+            color: var(--medium-gray);
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            z-index: 1001;
+            transform: translateX(150%);
+            transition: transform 0.5s ease;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification i {
+            margin-right: 10px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .audience-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .package-card.featured {
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .cookie-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .cookie-buttons {
+                margin-left: 0;
+                margin-top: 15px;
+                width: 100%;
+            }
+            
+            .cookie-btn {
+                flex: 1;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-crown"></i>
+                    <span>The Outreach King</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="nav-cta">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Grow Your Online Business With <span>The Best Blogger Outreach Service</span></h1>
+                    <p>At The Outreach King, we deliver high-impact guest post & blogger outreach services tailored for your niche, audience, and SEO goals. Our dedicated blog outreach team helps you dominate search rankings and build lasting authority.</p>
+                    <div class="hero-cta">
+                        <a href="#dual-audience" class="btn btn-primary">Get My Free Backlink Audit</a>
+                        <a href="#packages" class="btn btn-secondary">View Packages</a>
+                    </div>
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100+ Businesses Trust Us</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-star"></i>
+                            <span>Rated 4.9/5 by Clients</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Satisfaction Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Guest Posting Services">
+                    <div class="slots-remaining">
+                        <i class="fas fa-fire"></i> Only 7 Slots Left This Month!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual Audience Section -->
+    <section id="dual-audience" class="dual-audience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who Are You?</h2>
+                <p>Choose your path to success with our premium guest posting services</p>
+            </div>
+            
+            <div class="audience-container">
+                <!-- Business Owners Column -->
+                <div class="audience-column business">
+                    <div class="audience-badge">
+                        <i class="fas fa-fire"></i> Most Popular
+                    </div>
+                    <div class="audience-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Business Owners</h3>
+                    </div>
+                    
+                    <ul class="audience-benefits">
+                        <li><i class="fas fa-check"></i> Rank higher for your target keywords</li>
+                        <li><i class="fas fa-check"></i> Increase organic traffic & sales</li>
+                        <li><i class="fas fa-check"></i> Build brand authority & trust</li>
+                        <li><i class="fas fa-check"></i> Get niche-relevant backlinks</li>
+                        <li><i class="fas fa-check"></i> Cost-effective pricing</li>
+                        <li><i class="fas fa-users"></i> Dedicated blog outreach team</li>
+                    </ul>
+                    
+                    <div class="audience-cta">
+                        <button class="btn btn-white" onclick="showBusinessForm()">
+                            <i class="fas fa-chart-line"></i> Get Free Backlink Audit
+                        </button>
+                        <button class="btn btn-outline-light" onclick="downloadGuestPostList()">
+                            <i class="fas fa-download"></i> Get 300+ Guest Post List
+                        </button>
+                        <button class="btn btn-outline-light" onclick="scheduleMeeting()">
+                            <i class="fas fa-calendar"></i> Book 15-Min Meeting
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Agencies Column -->
+                <div class="audience-column">
+                    <div class="audience-badge">
+                        <i class="fas fa-percentage"></i> Earn Commission
+                    </div>
+                    <div class="audience-header">
+                        <i class="fas fa-building"></i>
+                        <h3>SEO Agencies</h3>
+                    </div>
+                    
+                    <ul class="audience-benefits">
+                        <li><i class="fas fa-percentage"></i> Earn 10-20% commission on orders</li>
+                        <li><i class="fas fa-tag"></i> White-label solutions</li>
+                        <li><i class="fas fa-handshake"></i> Bulk discounts available</li>
+                        <li><i class="fas fa-users"></i> Dedicated blog outreach team</li>
+                        <li><i class="fas fa-chart-line"></i> Priority support & reporting</li>
+                        <li><i class="fas fa-dollar-sign"></i> Cost-effective for your clients</li>
+                    </ul>
+                    
+                    <div class="audience-cta">
+                        <button class="btn btn-white" onclick="showAgencyForm()">
+                            <i class="fas fa-handshake"></i> Become a Partner
+                        </button>
+                        <button class="btn btn-outline-light" onclick="downloadGuestPostList()">
+                            <i class="fas fa-download"></i> Get 300+ Guest Post List
+                        </button>
+                        <button class="btn btn-outline-light" onclick="scheduleMeeting()">
+                            <i class="fas fa-calendar"></i> Book 15-Min Meeting
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Services</h2>
+                <p>Discover our industry-leading solutions designed to boost your online presence and drive measurable results</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Premium Guest Posting Service -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="service-title">Premium Guest Posting on High Authority Blogs</h3>
+                        <p class="service-description">Get your content featured on real, high-authority blogs with genuine traffic and strong SEO metrics.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> High DA/DR sites (40-80+ Domain Authority)</li>
+                            <li><i class="fas fa-check"></i> Real organic traffic (1,000-50,000+ monthly visitors)</li>
+                            <li><i class="fas fa-check"></i> 100% do-follow, contextual backlinks</li>
+                            <li><i class="fas fa-check"></i> Niche-relevant placements in your industry</li>
+                            <li><i class="fas fa-check"></i> Professional content creation (500-1000 words)</li>
+                            <li><i class="fas fa-check"></i> Permanent links with lifetime guarantee</li>
+                            <li><i class="fas fa-check"></i> No PBNs or low-quality sites</li>
+                            <li><i class="fas fa-check"></i> Detailed reporting with live links</li>
+                        </ul>
+                        
+                        <div class="service-cta">
+                            <button class="btn btn-primary" onclick="showGuestPostingForm()">
+                                Get Premium Guest Posts
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Manual Blog Outreach Service -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="service-title">Manual Blog Outreach</h3>
+                        <p class="service-description">Our dedicated outreach team builds genuine relationships with bloggers to secure high-quality placements.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Personalized, one-on-one outreach</li>
+                            <li><i class="fas fa-check"></i> Custom-tailored pitch creation</li>
+                            <li><i class="fas fa-check"></i> Relationship-based link building</li>
+                            <li><i class="fas fa-check"></i> Targeted blogger identification</li>
+                            <li><i class="fas fa-check"></i> Follow-up and negotiation</li>
+                            <li><i class="fas fa-check"></i> Content collaboration and optimization</li>
+                            <li><i class="fas fa-check"></i> White-label reporting available</li>
+                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        </ul>
+                        
+                        <div class="service-cta">
+                            <button class="btn btn-primary" onclick="showOutreachForm()">
+                                Start Manual Outreach
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Guest Posting Packages</h2>
+                <p>Choose the perfect package for your needs. All packages include our dedicated blog outreach team.</p>
+            </div>
+            
+            <div class="package-cards">
+                <div class="package-card">
+                    <h3 class="package-name">Basic Plan</h3>
+                    <div class="package-price">$100<span>/per guest post</span></div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Domain Authority 20+</li>
+                        <li><i class="fas fa-check"></i> Domain Rating 20+</li>
+                        <li><i class="fas fa-check"></i> 1 Do-Follow Link</li>
+                        <li><i class="fas fa-check"></i> Permanent Post</li>
+                        <li><i class="fas fa-check"></i> Niche-Relevant Blog Post</li>
+                        <li><i class="fas fa-check"></i> 1000+ Organic Traffic</li>
+                        <li><i class="fas fa-check"></i> 500 Words Content</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                
+                <div class="package-card featured">
+                    <h3 class="package-name">Standard Plan</h3>
+                    <div class="package-price">$199<span>/per guest post</span></div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Domain Authority 40+</li>
+                        <li><i class="fas fa-check"></i> Domain Rating 40+</li>
+                        <li><i class="fas fa-check"></i> 1 Do-Follow Link</li>
+                        <li><i class="fas fa-check"></i> Permanent Post</li>
+                        <li><i class="fas fa-check"></i> Niche-Relevant Blog Post</li>
+                        <li><i class="fas fa-check"></i> 2500+ Organic Traffic</li>
+                        <li><i class="fas fa-check"></i> 500 Words Content</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                
+                <div class="package-card">
+                    <h3 class="package-name">Premium Plan</h3>
+                    <div class="package-price">$249<span>/per guest post</span></div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Domain Authority 50+</li>
+                        <li><i class="fas fa-check"></i> Domain Rating 50+</li>
+                        <li><i class="fas fa-check"></i> 2 Do-Follow Links</li>
+                        <li><i class="fas fa-check"></i> Permanent Post</li>
+                        <li><i class="fas fa-check"></i> Niche-Relevant Blog Post</li>
+                        <li><i class="fas fa-check"></i> 5000+ Organic Traffic</li>
+                        <li><i class="fas fa-check"></i> 1000 Words Content</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Do We Work?</h2>
+                <p>Our dedicated blog outreach team follows a proven 4-step process</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Research</h3>
+                    <p class="step-description">We start by identifying the most niche-relevant blogs with strong metrics — real traffic, high Domain Authority, and audience relevance.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Engage</h3>
+                    <p class="step-description">Our team builds authentic relationships by genuinely engaging with bloggers and editors. We also leverage social media outreach.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Pitching</h3>
+                    <p class="step-description">We craft tailored, compelling pitches that demonstrate clear value to blog owners, ensuring higher acceptance rates and impactful SEO backlinks.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Track</h3>
+                    <p class="step-description">All outreach is carefully monitored. We log responses, manage follow-ups, and keep our processes transparent to maintain efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why We're Trusted by Thousands Worldwide</h2>
+                <p>Don't just take our word for it - hear from our satisfied clients</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-content">"The Outreach King has been instrumental in scaling our business. Their dedicated blog outreach team secured placements that helped us increase organic traffic by 65% in just 3 months!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Business Owner, UrbanStyle</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-content">"The commission structure for agencies is fantastic. We've increased our revenue by 30% since partnering with The Outreach King. Their team is professional and delivers consistent results."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client" class="author-avatar">
+                        <div class="author-info">
+                            <h4>David Wilson</h4>
+                            <p>Founder, SEO Boost Agency</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-content">"Cost-effective and results-driven. The Outreach King's white-label solutions have allowed us to scale our agency without the overhead. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Michael Thompson</h4>
+                            <p>CEO, RankHigher Agency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Outrank Your Competition?</h2>
+            <p>Join 100+ businesses boosting their online presence with our premium guest posting services</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-white">Get My Free Backlink Audit</a>
+                <a href="#" class="btn btn-outline" onclick="downloadGuestPostList()">Download Free Guest Post List</a>
+                <a href="#" class="btn btn-outline" onclick="scheduleMeeting()">Book 15-Min Meeting</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to get started? Fill out the form below and we'll get back to you within 24 hours</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Talk About Your Project</h3>
+                    <p>Whether you're a business owner looking to boost your online presence or an agency seeking white-label solutions, we're here to help you succeed.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@theoutreachking.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Business Ave, Suite 100, New York, NY 10001</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Monthly Budget</label>
+                                <select class="form-control" id="budget">
+                                    <option value="">Select your budget</option>
+                                    <option value="under-1000">Under $1,000</option>
+                                    <option value="1000-5000">$1,000 - $5,000</option>
+                                    <option value="5000-10000">$5,000 - $10,000</option>
+                                    <option value="over-10000">Over $10,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div id="businessFields" style="display: none;">
+                            <div class="form-group">
+                                <label for="website">Website URL</label>
+                                <input type="url" class="form-control" id="website" placeholder="https://yourwebsite.com">
+                            </div>
+                        </div>
+                        
+                        <div id="agencyFields" style="display: none;">
+                            <div class="form-group">
+                                <label for="agencyName">Agency Name</label>
+                                <input type="text" class="form-control" id="agencyName" placeholder="Your agency name">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="whiteLabel">
+                                    <label class="form-check-label" for="whiteLabel">I'm interested in white-label services</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>The Outreach King</h3>
+                    <p>Premium guest posting and manual outreach services that deliver real results for your business.</p>
+                    <div class="social-links">
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Premium Guest Posting</a></li>
+                        <li><a href="#">Manual Blog Outreach</a></li>
+                        <li><a href="#">White-Label Solutions</a></li>
+                        <li><a href="#">Link Building</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 The Outreach King. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+            <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText">Success!</span>
+    </div>
+
+    <script>
+        // Cookie Management
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+        
+        function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(cname) === 0) {
+                    return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+        }
+        
+        function acceptCookies() {
+            setCookie("cookieConsent", "accepted", 30);
+            document.getElementById("cookieBanner").classList.remove("show");
+            showNotification("Cookies accepted. Thank you!");
+        }
+        
+        function declineCookies() {
+            setCookie("cookieConsent", "declined", 30);
+            document.getElementById("cookieBanner").classList.remove("show");
+            showNotification("Cookies declined. Some features may be limited.");
+        }
+        
+        // Check cookie consent on page load
+        window.addEventListener("load", function() {
+            const cookieConsent = getCookie("cookieConsent");
+            if (cookieConsent === "") {
+                document.getElementById("cookieBanner").classList.add("show");
+            }
+            
+            // Initialize animations
+            initAnimations();
+        });
+        
+        // Show Business Form
+        function showBusinessForm() {
+            document.getElementById('businessFields').style.display = 'block';
+            document.getElementById('agencyFields').style.display = 'none';
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('message').value = "I'm a business owner interested in getting a free backlink audit for my website.";
+            showNotification("Please fill out the form to get your free backlink audit!");
+        }
+        
+        // Show Agency Form
+        function showAgencyForm() {
+            document.getElementById('agencyFields').style.display = 'block';
+            document.getElementById('businessFields').style.display = 'none';
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('message').value = "I'm an SEO agency interested in partnership opportunities and white-label solutions.";
+            showNotification("Please fill out the form to become a partner!");
+        }
+        
+        // Show Guest Posting Form
+        function showGuestPostingForm() {
+            document.getElementById('businessFields').style.display = 'block';
+            document.getElementById('agencyFields').style.display = 'none';
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('message').value = "I'm interested in Premium Guest Posting on High Authority Blogs. Please provide more information about your services.";
+            showNotification("Please fill out the form to get started with Premium Guest Posting!");
+        }
+        
+        // Show Outreach Form
+        function showOutreachForm() {
+            document.getElementById('businessFields').style.display = 'block';
+            document.getElementById('agencyFields').style.display = 'none';
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('message').value = "I'm interested in Manual Blog Outreach services. Please provide more information about your outreach process.";
+            showNotification("Please fill out the form to get started with Manual Blog Outreach!");
+        }
+        
+        // Download Guest Post List
+        function downloadGuestPostList() {
+            showNotification("Preparing your download...");
+            
+            setTimeout(() => {
+                showNotification("Your free guest post list is being downloaded!");
+                
+                // Track this action for analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'download', {
+                        'event_category': 'Lead Generation',
+                        'event_label': 'Guest Post List'
+                    });
+                }
+            }, 1500);
+        }
+        
+        // Schedule Meeting
+        function scheduleMeeting() {
+            showNotification("Redirecting to meeting scheduler...");
+            
+            setTimeout(() => {
+                // Redirect to meeting scheduler
+                window.open('https://calendly.com/theoutreachking/15min', '_blank');
+            }, 1000);
+        }
+        
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                budget: document.getElementById('budget').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Add audience-specific fields
+            if (document.getElementById('businessFields').style.display !== 'none') {
+                formData.website = document.getElementById('website').value;
+                formData.audience = 'business';
+            } else if (document.getElementById('agencyFields').style.display !== 'none') {
+                formData.agencyName = document.getElementById('agencyName').value;
+                formData.whiteLabel = document.getElementById('whiteLabel').checked;
+                formData.audience = 'agency';
+            }
+            
+            // Simulate form submission
+            showNotification("Sending your message...");
+            
+            setTimeout(() => {
+                console.log('Form submitted:', formData);
+                showNotification("Message sent successfully! We'll get back to you within 24 hours.");
+                
+                // Reset form
+                this.reset();
+                document.getElementById('businessFields').style.display = 'none';
+                document.getElementById('agencyFields').style.display = 'none';
+                
+                // Track this action for analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'submit', {
+                        'event_category': 'Lead Generation',
+                        'event_label': 'Contact Form'
+                    });
+                }
+                
+                // For Meta Pixel tracking
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Contact Form Submission',
+                        content_category: 'Lead Generation'
+                    });
+                }
+            }, 1500);
+        });
+        
+        // Notification System
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notificationText');
+            
+            notificationText.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animation on Scroll
+        function initAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Add fade-in class to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.add('fade-in');
+            });
+        });
+        
+        // Update slots remaining counter
+        function updateSlotsRemaining() {
+            const slotsElement = document.querySelector('.slots-remaining');
+            if (slotsElement) {
+                const currentSlots = parseInt(slotsElement.textContent.match(/\d+/)[0]);
+                if (currentSlots > 1) {
+                    slotsElement.innerHTML = `<i class="fas fa-fire"></i> Only ${currentSlots - 1} Slots Left This Month!`;
+                } else {
+                    slotsElement.innerHTML = `<i class="fas fa-fire"></i> Fully Booked This Month!`;
+                }
+            }
+        }
+        
+        // Update slots every hour (in a real implementation, this would be managed server-side)
+        setInterval(updateSlotsRemaining, 3600000);
+        
+        // Meta Pixel Integration (placeholder)
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+        
+        // Google Analytics Integration (placeholder)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID');
+    </script>
+</body>
+</html>
