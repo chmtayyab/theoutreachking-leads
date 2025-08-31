@@ -1690,47 +1690,126 @@
         
         // Form Submission with MailerLite API
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const formData = {
-                email: document.getElementById('email').value,
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                budget: document.getElementById('budget').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Add audience-specific fields
-            if (document.getElementById('businessFields').style.display !== 'none') {
-                formData.website = document.getElementById('website').value;
-            }
-            if (document.getElementById('agencyFields').style.display !== 'none') {
-                formData.agency_name = document.getElementById('agencyName').value;
-                formData.white_label = document.getElementById('whiteLabel').checked ? 'yes' : 'no';
-            }
-            
-           // Replace the API URL in your fetch call
-fetch('https://connect.mailerlite.com/api/v3/subscribers', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMmE4NDNlZjZhNjc0MmE3MTBlODdjM2U2OTc3OTE0YzIwODZlNDk4NDI4ODQ0NjgxMjJhNmYyYjQ3MTE1ZTlmYTdlZDViYWY2OGQ4ZGFhODciLCJpYXQiOjE3NTY2Mzc1NzcuMzI4MzAyLCJuYmYiOjE3NTY2Mzc1NzcuMzI4MzA1LCJleHAiOjQ5MTIzMTExNzcuMzIxNjE4LCJzdWIiOiIxNzgyNjc4Iiwic2NvcGVzIjpbXX0.p9cvKYZxvRCqz_EpAQ8jG3NlcwpJvDNiCjXHOVmvyAM3SUAZDrGiz0BUpEQpvVegps2QCVBOXIfPpKfKXrLj6IRBw4qQR28Tby57m0yr7KAO43-8RebDws0pnvYVs2bs7pNxHu2VEdHYVTQ8gorjTtWkMJ6D1H-B8eN5DGkccmFrC9r5sFFemh1GD-nigsc9hGSH6NYmXCiWt0DtiXcSD3iFTWAp23vvJfDqMhqUABOFD31rSZUhkJH40zs7kDTUrVtJgVYpZaR0wjs_1wMgKTaLK7fpaxIgs6zf7XloFdYp8Kj-IpE4t6369HkKKD_O0IHe34jsA5G-Df6HuqYry0s6gky10hvt_xY6x9VXVacEuy_9b6jexrG0PI1sQoHIRJ2_ZTIi9Q514zBxAQ3AAKLOu_jnh_ZLdHCyO8ryORbOBIOTMbxlK5eEaG-tKzG0JfE2IpEzVosgf59Olo7MvQs7ekc7utXm6fbsN3jSNhDYwLu8D2Y4Pk7iO5BxSxBjJeBTBRN9MH7zJu6HupE3bLXhVvtmZnsKaOTsIpvUTNDfhHqIp464li9i-0FyQd5azKXiJoXi6RfVxswRwI9dHtbAbklmZa1Sm5LleRipDRfstX3Unq7PebUzqZINf8tXnEc5HrPRAPvVkeW928FFqNubaOG0z4NwYmJC0_yoeKk'
-    },
-    body: JSON.stringify({
+    e.preventDefault();
+    
+    // Show loading state
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Sending...';
+    submitButton.disabled = true;
+    
+    // Get form values
+    const formData = {
+        email: document.getElementById('email').value,
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        budget: document.getElementById('budget').value,
+        message: document.getElementById('message').value
+    };
+    
+    // Add audience-specific fields
+    if (document.getElementById('businessFields').style.display !== 'none') {
+        formData.website = document.getElementById('website').value;
+    }
+    if (document.getElementById('agencyFields').style.display !== 'none') {
+        formData.agency_name = document.getElementById('agencyName').value;
+        formData.white_label = document.getElementById('whiteLabel').checked;
+    }
+    
+    // MailerLite v3 API implementation
+    const subscriberData = {
         email: formData.email,
         name: formData.name,
-        fields: {
-            phone: formData.phone,
-            budget: formData.budget,
-            message: formData.message,
-            website: formData.website,
-            agency_name: formData.agency_name,
-            white_label: formData.white_label
+        fields: {}
+    };
+    
+    // Add custom fields only if they have values
+    if (formData.phone) {
+        subscriberData.fields.phone = formData.phone;
+    }
+    if (formData.budget) {
+        subscriberData.fields.budget = formData.budget;
+    }
+    if (formData.message) {
+        subscriberData.fields.message = formData.message;
+    }
+    if (formData.website) {
+        subscriberData.fields.website = formData.website;
+    }
+    if (formData.agency_name) {
+        subscriberData.fields.agency_name = formData.agency_name;
+    }
+    if (formData.white_label) {
+        subscriberData.fields.white_label = formData.white_label;
+    }
+    
+    // Submit to MailerLite v3 API
+    fetch('https://connect.mailerlite.com/api/v3/subscribers', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMmE4NDNlZjZhNjc0MmE3MTBlODdjM2U2OTc3OTE0YzIwODZlNDk4NDI4ODQ0NjgxMjJhNmYyYjQ3MTE1ZTlmYTdlZDViYWY2OGQ4ZGFhODciLCJpYXQiOjE3NTY2Mzc1NzcuMzI4MzAyLCJuYmYiOjE3NTY2Mzc1NzcuMzI4MzA1LCJleHAiOjQ5MTIzMTExNzcuMzIxNjE4LCJzdWIiOiIxNzgyNjc4Iiwic2NvcGVzIjpbXX0.p9cvKYZxvRCqz_EpAQ8jG3NlcwpJvDNiCjXHOVmvyAM3SUAZDrGiz0BUpEQpvVegps2QCVBOXIfPpKfKXrLj6IRBw4qQR28Tby57m0yr7KAO43-8RebDws0pnvYVs2bs7pNxHu2VEdHYVTQ8gorjTtWkMJ6D1H-B8eN5DGkccmFrC9r5sFFemh1GD-nigsc9hGSH6NYmXCiWt0DtiXcSD3iFTWAp23vvJfDqMhqUABOFD31rSZUhkJH40zs7kDTUrVtJgVYpZaR0wjs_1wMgKTaLK7fpaxIgs6zf7XloFdYp8Kj-IpE4t6369HkKKD_O0IHe34jsA5G-Df6HuqYry0s6gky10hvt_xY6x9VXVacEuy_9b6jexrG0PI1sQoHIRJ2_ZTIi9Q514zBxAQ3AAKLOu_jnh_ZLdHCyO8ryORbOBIOTMbxlK5eEaG-tKzG0JfE2IpEzVosgf59Olo7MvQs7ekc7utXm6fbsN3jSNhDYwLu8D2Y4Pk7iO5BxSxBjJeBTBRN9MH7zJu6HupE3bLXhVvtmZnsKaOTsIpvUTNDfhHqIp464li9i-0FyQd5azKXiJoXi6RfVxswRwI9dHtbAbklmZa1Sm5LleRipDRfstX3Unq7PebUzqZINf8tXnEc5HrPRAPvVkeW928FFqNubaOG0z4NwYmJC0_yoeKk'
         },
-        groups: [164189343561287347]
+        body: JSON.stringify(subscriberData)
     })
-})
+    .then(response => {
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
+        return response.json();
+    })
+    .then(data => {
+        console.log('Success response:', data);
+        
+        // Add to group after successful subscription
+        if (data.data && data.data.id) {
+            return addToGroup(data.data.id);
+        } else {
+            throw new Error('No subscriber ID returned');
+        }
+    })
+    .then(() => {
+        // Hide form and show success message
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Reset form after 5 seconds
+        setTimeout(() => {
+            document.getElementById('contactForm').reset();
+            document.getElementById('contactForm').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'none';
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }, 5000);
+    })
+    .catch(error => {
+        console.error('Detailed error:', error);
+        alert('There was an error submitting your form. Please try again or contact us directly at info@theoutreachking.com');
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+});
+
+// Function to add subscriber to group
+function addToGroup(subscriberId) {
+    return fetch(`https://connect.mailerlite.com/api/v3/groups/${164189343561287347}/subscribers`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMmE4NDNlZjZhNjc0MmE3MTBlODdjM2U2OTc3OTE0YzIwODZlNDk4NDI4ODQ0NjgxMjJhNmYyYjQ3MTE1ZTlmYTdlZDViYWY2OGQ4ZGFhODciLCJpYXQiOjE3NTY2Mzc1NzcuMzI4MzAyLCJuYmYiOjE3NTY2Mzc1NzcuMzI4MzA1LCJleHAiOjQ5MTIzMTExNzcuMzIxNjE4LCJzdWIiOiIxNzgyNjc4Iiwic2NvcGVzIjpbXX0.p9cvKYZxvRCqz_EpAQ8jG3NlcwpJvDNiCjXHOVmvyAM3SUAZDrGiz0BUpEQpvVegps2QCVBOXIfPpKfKXrLj6IRBw4qQR28Tby57m0yr7KAO43-8RebDws0pnvYVs2bs7pNxHu2VEdHYVTQ8gorjTtWkMJ6D1H-B8eN5DGkccmFrC9r5sFFemh1GD-nigsc9hGSH6NYmXCiWt0DtiXcSD3iFTWAp23vvJfDqMhqUABOFD31rSZUhkJH40zs7kDTUrVtJgVYpZaR0wjs_1wMgKTaLK7fpaxIgs6zf7XloFdYp8Kj-IpE4t6369HkKKD_O0IHe34jsA5G-Df6HuqYry0s6gky10hvt_xY6x9VXVacEuy_9b6jexrG0PI1sQoHIRJ2_ZTIi9Q514zBxAQ3AAKLOu_jnh_ZLdHCyO8ryORbOBIOTMbxlK5eEaG-tKzG0JfE2IpEzVosgf59Olo7MvQs7ekc7utXm6fbsN3jSNhDYwLu8D2Y4Pk7iO5BxSxBjJeBTBRN9MH7zJu6HupE3bLXhVvtmZnsKaOTsIpvUTNDfhHqIp464li9i-0FyQd5azKXiJoXi6RfVxswRwI9dHtbAbklmZa1Sm5LleRipDRfstX3Unq7PebUzqZINf8tXnEc5HrPRAPvVkeW928FFqNubaOG0z4NwYmJC0_yoeKk'
+        },
+        body: JSON.stringify({
+            subscribers: [subscriberId]
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Added to group:', data);
+    })
+    .catch(error => {
+        console.error('Error adding to group:', error);
+        // Don't show error to user, just log it
+    });
+}
             .then(response => response.json())
             .then(data => {
                 // Hide form and show success message
@@ -1841,5 +1920,6 @@ fetch('https://connect.mailerlite.com/api/v3/subscribers', {
     </script>
 </body>
 </html>
+
 
 
