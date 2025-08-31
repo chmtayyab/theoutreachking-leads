@@ -1710,28 +1710,27 @@
                 formData.white_label = document.getElementById('whiteLabel').checked ? 'yes' : 'no';
             }
             
-            // Submit to MailerLite
-            fetch('https://api.mailerlite.com/api/v2/subscribers', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-MailerLite-ApiKey': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMmE4NDNlZjZhNjc0MmE3MTBlODdjM2U2OTc3OTE0YzIwODZlNDk4NDI4ODQ0NjgxMjJhNmYyYjQ3MTE1ZTlmYTdlZDViYWY2OGQ4ZGFhODciLCJpYXQiOjE3NTY2Mzc1NzcuMzI4MzAyLCJuYmYiOjE3NTY2Mzc1NzcuMzI4MzA1LCJleHAiOjQ5MTIzMTExNzcuMzIxNjE4LCJzdWIiOiIxNzgyNjc4Iiwic2NvcGVzIjpbXX0.p9cvKYZxvRCqz_EpAQ8jG3NlcwpJvDNiCjXHOVmvyAM3SUAZDrGiz0BUpEQpvVegps2QCVBOXIfPpKfKXrLj6IRBw4qQR28Tby57m0yr7KAO43-8RebDws0pnvYVs2bs7pNxHu2VEdHYVTQ8gorjTtWkMJ6D1H-B8eN5DGkccmFrC9r5sFFemh1GD-nigsc9hGSH6NYmXCiWt0DtiXcSD3iFTWAp23vvJfDqMhqUABOFD31rSZUhkJH40zs7kDTUrVtJgVYpZaR0wjs_1wMgKTaLK7fpaxIgs6zf7XloFdYp8Kj-IpE4t6369HkKKD_O0IHe34jsA5G-Df6HuqYry0s6gky10hvt_xY6x9VXVacEuy_9b6jexrG0PI1sQoHIRJ2_ZTIi9Q514zBxAQ3AAKLOu_jnh_ZLdHCyO8ryORbOBIOTMbxlK5eEaG-tKzG0JfE2IpEzVosgf59Olo7MvQs7ekc7utXm6fbsN3jSNhDYwLu8D2Y4Pk7iO5BxSxBjJeBTBRN9MH7zJu6HupE3bLXhVvtmZnsKaOTsIpvUTNDfhHqIp464li9i-0FyQd5azKXiJoXi6RfVxswRwI9dHtbAbklmZa1Sm5LleRipDRfstX3Unq7PebUzqZINf8tXnEc5HrPRAPvVkeW928FFqNubaOG0z4NwYmJC0_yoeKk'
-                },
-                body: JSON.stringify({
-                    email: formData.email,
-                    name: formData.name,
-                    fields: {
-                        phone: formData.phone,
-                        budget: formData.budget,
-                        message: formData.message,
-                        website: formData.website,
-                        agency_name: formData.agency_name,
-                        white_label: formData.white_label
-                    },
-                    resubscribe: true,
-                    groups: 164189343561287347 // Optional: add to specific group
-                })
-            })
+           // Replace the API URL in your fetch call
+fetch('https://connect.mailerlite.com/api/v3/subscribers', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMmE4NDNlZjZhNjc0MmE3MTBlODdjM2U2OTc3OTE0YzIwODZlNDk4NDI4ODQ0NjgxMjJhNmYyYjQ3MTE1ZTlmYTdlZDViYWY2OGQ4ZGFhODciLCJpYXQiOjE3NTY2Mzc1NzcuMzI4MzAyLCJuYmYiOjE3NTY2Mzc1NzcuMzI4MzA1LCJleHAiOjQ5MTIzMTExNzcuMzIxNjE4LCJzdWIiOiIxNzgyNjc4Iiwic2NvcGVzIjpbXX0.p9cvKYZxvRCqz_EpAQ8jG3NlcwpJvDNiCjXHOVmvyAM3SUAZDrGiz0BUpEQpvVegps2QCVBOXIfPpKfKXrLj6IRBw4qQR28Tby57m0yr7KAO43-8RebDws0pnvYVs2bs7pNxHu2VEdHYVTQ8gorjTtWkMJ6D1H-B8eN5DGkccmFrC9r5sFFemh1GD-nigsc9hGSH6NYmXCiWt0DtiXcSD3iFTWAp23vvJfDqMhqUABOFD31rSZUhkJH40zs7kDTUrVtJgVYpZaR0wjs_1wMgKTaLK7fpaxIgs6zf7XloFdYp8Kj-IpE4t6369HkKKD_O0IHe34jsA5G-Df6HuqYry0s6gky10hvt_xY6x9VXVacEuy_9b6jexrG0PI1sQoHIRJ2_ZTIi9Q514zBxAQ3AAKLOu_jnh_ZLdHCyO8ryORbOBIOTMbxlK5eEaG-tKzG0JfE2IpEzVosgf59Olo7MvQs7ekc7utXm6fbsN3jSNhDYwLu8D2Y4Pk7iO5BxSxBjJeBTBRN9MH7zJu6HupE3bLXhVvtmZnsKaOTsIpvUTNDfhHqIp464li9i-0FyQd5azKXiJoXi6RfVxswRwI9dHtbAbklmZa1Sm5LleRipDRfstX3Unq7PebUzqZINf8tXnEc5HrPRAPvVkeW928FFqNubaOG0z4NwYmJC0_yoeKk'
+    },
+    body: JSON.stringify({
+        email: formData.email,
+        name: formData.name,
+        fields: {
+            phone: formData.phone,
+            budget: formData.budget,
+            message: formData.message,
+            website: formData.website,
+            agency_name: formData.agency_name,
+            white_label: formData.white_label
+        },
+        groups: [164189343561287347]
+    })
+})
             .then(response => response.json())
             .then(data => {
                 // Hide form and show success message
@@ -1842,4 +1841,5 @@
     </script>
 </body>
 </html>
+
 
