@@ -1568,24 +1568,51 @@
     </div>
     <script>
         // Formspree Success Handling
-        window.addEventListener("DOMContentLoaded", function() {
-            const form = document.getElementById("contactForm");
-            const successMessage = document.getElementById("successMessage");
-            
-            form.addEventListener("submit", function(e) {
-                // Formspree will handle the submission
-                // We'll show a success message after submission
-                setTimeout(function() {
-                    successMessage.style.display = "block";
-                    form.reset();
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(function() {
-                        successMessage.style.display = "none";
-                    }, 5000);
-                }, 1000);
-            });
+        // Formspree and Subscription Handling
+window.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+    
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(form);
+        
+        // Submit to our subscription script
+        fetch('process_subscription.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                // Show success message
+                successMessage.style.display = "block";
+                successMessage.textContent = data.message;
+                
+                // Still submit to Formspree for email notification
+                form.submit();
+            } else {
+                // Show error message
+                successMessage.style.display = "block";
+                successMessage.style.backgroundColor = "#f8d7da";
+                successMessage.style.color = "#721c24";
+                successMessage.textContent = data.message;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Still submit to Formspree even if there's an error with our script
+            form.submit();
         });
+        
+        // Reset form after a delay
+        setTimeout(function() {
+            form.reset();
+        }, 1000);
+    });
+});
         
         // Cookie Management
         function setCookie(name, value, days) {
@@ -1788,5 +1815,6 @@
     </script>
 </body>
 </html>
+
 
 
